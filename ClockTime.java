@@ -102,13 +102,14 @@ public class ClockTime
     }
 
     public boolean equals(ClockTime clockA, ClockTime clockB){
-        boolean equals = false;
+        
 
-        if (clockA.equals(clockB)){
-            equals = true;
+        if (clockA.getHour() == clockB.getHour()){
+              return true;
+        } else {
+            return false;
         }
 
-        return equals;
     }
 
     
