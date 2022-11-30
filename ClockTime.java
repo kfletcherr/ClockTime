@@ -67,7 +67,7 @@ public class ClockTime
     //-----------------------------------
     //building the strings
     public String toString(){
-        String time = hour +":"+ minute + ":"+ second;   
+        String time = hour +":0"+ minute + ":0"+ second;   
         if (hour < 10 && minute < 10 && second < 10){
             time = "0" + hour +":0"+ minute + ":0"+ second;
         }
@@ -102,13 +102,14 @@ public class ClockTime
     }
 
     public boolean equals(ClockTime clockA, ClockTime clockB){
-        boolean equals = false;
+        
 
-        if (clockA.equals(clockB)){
-            equals = true;
+        if (clockA.getHour() == clockB.getHour()){
+              return true;
+        } else {
+            return false;
         }
 
-        return equals;
     }
 
     
